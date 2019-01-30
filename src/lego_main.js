@@ -13,13 +13,12 @@ document.querySelector(".saveButton").addEventListener("click", () => {
         creation_color: colorValue,
         creation_shape: shape
     }
-    console.log(legoToSave)
-
-    // fetch("http://localhost:3000/posts", {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify(legoToSave)
-    // })
+    // fetch to post to local API
+    fetch("http://localhost:3000/posts", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(legoToSave)
+    })
 })
